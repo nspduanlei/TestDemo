@@ -24,8 +24,13 @@
             android:process=":remote">
         </service>
 
-
-        <activity android:name=".MyViewActivity"/>
+        <activity
+            android:name=".MyViewActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TEST"/>
+            </intent-filter>
+        </activity>
 
         <activity android:name=".ServiceTestActivity"/>
 

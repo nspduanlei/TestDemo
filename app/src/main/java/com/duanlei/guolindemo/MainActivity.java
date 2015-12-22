@@ -9,6 +9,8 @@ import android.content.IntentFilter;
 import android.graphics.PixelFormat;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -43,8 +45,24 @@ public class MainActivity extends AppCompatActivity {
         //new VolleyTest(this).postTest();
 
 
-        testWindow();
+//        testWindow();
+
+        Handler myHandler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+            }
+        };
+
+
+        //myHandler.obtainMessage(whart, obj).sendToTarget();
+
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.TEST");
+        startActivity(intent);
     }
+
+
 
 
     private static final String ACTIVITY_TEST = "com.dl.receiver.LAUNCH";
