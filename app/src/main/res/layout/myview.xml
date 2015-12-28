@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <com.duanlei.guolindemo.view.TopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:myTitle="title"
+        app:myTitleTextColor="#000000"
+        app:myTitleTextSize="16sp"
+        app:leftText="left"
+        app:leftTextColor="#000000"
+        app:rightText="right"
+        app:rightTextColor="#000000"/>
+
+
 
     <!--<com.duanlei.guolindemo.MyView-->
         <!--android:layout_width="200dp"-->
         <!--android:layout_height="100dp"/>-->
 
-    <com.duanlei.guolindemo.view.MyView
+    <com.duanlei.guolindemo.view.MyTextView2
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="fasfadfaasfasfdsadfasfafa"
+        android:padding="10dp"/>
+
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="test"-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:onClick="test"/>-->
+
 
 </LinearLayout>

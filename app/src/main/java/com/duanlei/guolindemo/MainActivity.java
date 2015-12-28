@@ -9,8 +9,6 @@ import android.content.IntentFilter;
 import android.graphics.PixelFormat;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -30,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,19 +47,19 @@ public class MainActivity extends AppCompatActivity {
 
 //        testWindow();
 
-        Handler myHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-            }
-        };
+//        Handler myHandler = new Handler() {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                super.handleMessage(msg);
+//            }
+//        };
 
 
         //myHandler.obtainMessage(whart, obj).sendToTarget();
 
-        Intent intent = new Intent();
-        intent.setAction("android.intent.action.TEST");
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setAction("android.intent.action.TEST");
+//        startActivity(intent);
     }
 
 
