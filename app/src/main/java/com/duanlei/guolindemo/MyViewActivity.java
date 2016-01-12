@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.duanlei.guolindemo.view.MyProgress;
 import com.duanlei.guolindemo.view.TopBar;
 
 /**
@@ -47,6 +48,9 @@ public class MyViewActivity extends Activity {
             }
         });
 
+
+        MyProgress myProgress = (MyProgress) findViewById(R.id.myProgress);
+        myProgress.setSweepAngle(180);
 
         //mHandler = null;
     }

@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -58,6 +59,7 @@ public class TopBar extends RelativeLayout {
 
         mTitleTextColor = ta.getColor(R.styleable.TopBar_myTitleTextColor, 0);
         mTitleSize = ta.getDimension(R.styleable.TopBar_myTitleTextSize, 10);
+
         mTitle = ta.getString(R.styleable.TopBar_myTitle);
 
         //获取完TypedArray的值后，一般要调用recyle方法来避免重新创建的时候的错误
@@ -90,7 +92,7 @@ public class TopBar extends RelativeLayout {
 
         mTitleView.setText(mTitle);
         mTitleView.setTextColor(mTitleTextColor);
-        mTitleView.setTextSize(mTitleSize);
+        mTitleView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTitleSize);
         mTitleView.setGravity(Gravity.CENTER);
 
         //为组件元素设置相应的布局元素
