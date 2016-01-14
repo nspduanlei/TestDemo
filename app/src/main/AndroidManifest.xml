@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listviewTest.HideToolbarTest">
+        <activity android:name=".scroll.ScrollTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

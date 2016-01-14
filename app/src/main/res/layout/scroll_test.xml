@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/listView_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <com.duanlei.guolindemo.scroll.DragView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"/>
 
-    <include layout="@layout/toolbar_layout"/>
-
-</FrameLayout>
+</LinearLayout>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ListView
-        android:id="@+id/listView_1"
+        android:id="@+id/lv_chat"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"/>
 
-    <include layout="@layout/toolbar_layout"/>
-
-</FrameLayout>
+</LinearLayout>
