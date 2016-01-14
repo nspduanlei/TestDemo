@@ -2,10 +2,6 @@ package com.duanlei.guolindemo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Toast;
-
-import com.duanlei.guolindemo.view.MyProgress;
-import com.duanlei.guolindemo.view.TopBar;
 
 /**
  * Author: duanlei
@@ -31,26 +27,26 @@ public class MyViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myview);
+        setContentView(R.layout.myview_2);
 
         //sContext = this;
 
-        TopBar topBar = (TopBar) findViewById(R.id.topbar);
-        topBar.setOnTopbarClickListener(new TopBar.TopbarClickLister() {
-            @Override
-            public void leftClick() {
-                Toast.makeText(MyViewActivity.this, "left", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void rightClick() {
-                Toast.makeText(MyViewActivity.this, "right", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        MyProgress myProgress = (MyProgress) findViewById(R.id.myProgress);
-        myProgress.setSweepAngle(180);
+//        TopBar topBar = (TopBar) findViewById(R.id.topbar);
+//        topBar.setOnTopbarClickListener(new TopBar.TopbarClickLister() {
+//            @Override
+//            public void leftClick() {
+//                Toast.makeText(MyViewActivity.this, "left", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void rightClick() {
+//                Toast.makeText(MyViewActivity.this, "right", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//
+//        MyProgress myProgress = (MyProgress) findViewById(R.id.myProgress);
+//        myProgress.setSweepAngle(180);
 
         //mHandler = null;
     }

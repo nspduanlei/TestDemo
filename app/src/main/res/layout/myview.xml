@@ -38,11 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <com.duanlei.guolindemo.view.VoiceBarChart
-            android:layout_width="match_parent"
-            android:layout_height="800dp"
-            android:layout_marginTop="20dp"/>
-
 
         <!--<Button-->
         <!--android:layout_width="wrap_content"-->

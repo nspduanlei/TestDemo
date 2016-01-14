@@ -3,11 +3,11 @@ package com.duanlei.guolindemo.view;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.duanlei.guolindemo.utils.ScreenUtils;
 
 /**
  * Author: duanlei
@@ -31,9 +31,8 @@ public class VoiceBarChart extends View {
     private Context mContext;
 
     private void init() {
-        mWidth =-ScreenUtils.getScreenWidth(mContext);
         mPaint = new Paint();
-        mPaint.setColor(Color.BLUE);
+        //mPaint.setColor(Color.BLUE);
     }
 
 //    @Override
@@ -41,15 +40,15 @@ public class VoiceBarChart extends View {
 //        super.onMeasure(widthMeasureSpec, mRectHeight);
 //    }
 
-    private int mRectCount = 10;
+    private int mRectCount = 20;
     //屏幕的宽度
     private int mWidth;
 
     //条形的宽度
-    private int mRectWidth = 40;
+    private int mRectWidth;
 
     //这个控件的高度
-    private int mRectHeight = 200;
+    private int mRectHeight;
 
     private int offset = 10;
 
@@ -70,4 +69,23 @@ public class VoiceBarChart extends View {
             );
         }
     }
+
+    private LinearGradient mLinearGradient;
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        mWidth = getWidth();
+        mRectHeight = getHeight();
+
+        mRectWidth = (int) (mWidth*0.6/mRectCount);
+        mLinearGradient = new LinearGradient(
+                0, 0, mRectWidth, mRectHeight, Color.YELLOW,
+                Color.BLUE, Shader.TileMode.CLAMP
+        );
+
+        mPaint.setShader(mLinearGradient);
+    }
 }
+
