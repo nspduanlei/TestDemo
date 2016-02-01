@@ -11,4 +11,21 @@
         android:text="StartCamera"
         android:onClick="startCamera"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="StartCamer2"
+        android:onClick="startCamera2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CustomCamera"
+        android:onClick="customCamera"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/iv"/>
+
 </LinearLayout>
