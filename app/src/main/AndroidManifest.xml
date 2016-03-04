@@ -13,19 +13,29 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".camera.TestCamera">
+
+        <!--<activity android:name=".camera.TestCamera">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.media.action.IMAGE_CAPTURE"/>-->
+
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity
+            android:name=".viewPageIndicator.SimpleTabsDefault"
+            android:theme="@style/Theme.PageIndicatorDefaults">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.media.action.IMAGE_CAPTURE"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-
         </activity>
 
         <service
@@ -47,7 +57,7 @@
 
         <activity android:name=".camera.Result"/>
 
-        <!--<activity android:name=".MainActivity"/>-->
+        <!--<activity android:name=".ViewPagerIndicatorTestActivity"/>-->
 
         <activity android:name=".WelcomeActivity"/>
 
@@ -62,13 +72,11 @@
             </intent-filter>
         </receiver>
 
-
         <receiver android:name=".four.MyReceiver">
             <intent-filter>
                 <action android:name="com.dl.receiver.LAUNCH"/>
             </intent-filter>
         </receiver>
-
 
         <!--<receiver android:name=".four.MyReceiver">-->
             <!--<intent-filter>-->
@@ -76,9 +84,5 @@
             <!--</intent-filter>-->
         <!--</receiver>-->
 
-
     </application>
-
-
-
 </manifest>
